@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+  <h1>Edit Item</h1>
+  <form action="/users/<%= owner._id %>/foods/<%= item._id %>?_method=PUT" method="POST">
+    <label>Name: <input name="name" value="<%= item.name %>" required></label>
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>
